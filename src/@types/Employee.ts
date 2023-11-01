@@ -10,4 +10,6 @@ interface ITerritory {
   Region: IRegion;
 }
 
-export type { IRegion, ITerritory };
+interface IEmployee {}
+
+export type { IRegion, ITerritory, IEmployee };

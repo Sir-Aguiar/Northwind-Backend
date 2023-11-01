@@ -7,6 +7,7 @@ interface ICategory {
 
 interface ISupplier {
   supplier_id: number;
+
   company_name: string;
   contact_name: string | null;
   contact_title: string | null;
@@ -20,4 +21,14 @@ interface ISupplier {
   homepage: string | null;
 }
 
-export type { ICategory, ISupplier };
+interface IProduct {
+  product_id: number;
+  product_name: string;
+  supplier_id: number;
+  Supplier: ISupplier;
+  category_id: number;
+  Category: ICategory;
+  discontinued: boolean;
+}
+
+export type { ICategory, ISupplier, IProduct };
