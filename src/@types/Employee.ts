@@ -3,11 +3,11 @@ interface IRegion {
   region_description: string;
 }
 
-interface ITerritories {
+interface ITerritory {
   territory_id: string;
   territory_description: string;
   region_id: number;
   Region: IRegion;
 }
 
-export type { IRegion, ITerritories };
+export type { IRegion, ITerritory };

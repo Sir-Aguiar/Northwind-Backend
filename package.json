@@ -1,10 +1,10 @@
 {
-  "name": "factorymethod",
+  "name": "northwind-backend",
   "version": "1.0.0",
   "description": "",
   "main": "buid/index.js",
   "scripts": {
-    "test": "vitest",
+    "test": "vitest --ui",
     "dev": "tsnd src/index.ts",
     "start": "node ."
   },
