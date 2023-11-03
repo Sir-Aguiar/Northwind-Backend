@@ -29,6 +29,10 @@ interface IProduct {
   category_id: number;
   Category: ICategory;
   discontinued: boolean;
+  unit_price: number;
+  quantity_per_unit: string;
+  units_in_stock: number;
+  units_on_order: number;
 }
 
 export type { ICategory, ISupplier, IProduct };

@@ -21,7 +21,7 @@ export const CreateCategoryUserCase = async ({ category_name, description }: IPr
 
   const execute = async () => {
     //
-  };
+  }; 
 
   return { execute };
 };
