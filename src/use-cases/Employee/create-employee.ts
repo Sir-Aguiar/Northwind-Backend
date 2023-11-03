@@ -3,22 +3,22 @@ import { EntityError } from "../../entities/EntityError";
 interface IProps {
   first_name: string;
   last_name: string;
+  birth_date?: string;
+  hire_date: string;
+  address: string;
+  city: string;
+  region: string;
+  postal_code: string;
+  country: string;
   title?: string;
   title_of_courtesy?: string;
-  birth_date?: string;
-  hire_date?: string;
-  address?: string;
-  city?: string;
-  region?: string;
-  postal_code?: string;
-  country?: string;
   home_phone?: string;
   extension?: string;
   notes?: string;
   reports_to?: number;
 }
 
-export const CreateEmployeeUseCase = async ({ first_name, last_name, title, title_of_courtesy }: IProps) => {
+export const CreateEmployee = async ({ first_name, last_name, title, title_of_courtesy }: IProps) => {
   if (typeof first_name !== "string") {
     throw new EntityError("Invalid first name");
   }
