@@ -1,3 +1,4 @@
+import { IEmployee } from "./Employee";
 import { IProduct } from "./Products";
 
 interface IShipper {
@@ -6,7 +7,14 @@ interface IShipper {
   phone: string;
 }
 
-interface IOrder {}
+interface IOrder {
+  customer_id: string;
+  Customer: ICustomer;
+  employee_id: number;
+  Employee: IEmployee;
+  ship_via: number;
+  Shipper: IShipper;
+}
 
 interface IOrderDetails {
   order_id: number;

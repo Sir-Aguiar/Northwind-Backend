@@ -75,14 +75,6 @@ export const CreateSupplier = async ({
     throw new EntityError("Country must have 15 or less characters");
   }
 
-  if (typeof country !== "string") {
-    throw new EntityError("Invalid country");
-  }
-
-  if (country.length > 15) {
-    throw new EntityError("Country must have 15 or less characters");
-  }
-
   if (typeof phone !== "string") {
     throw new EntityError("Invalid phone");
   }

@@ -4,7 +4,7 @@ export default defineConfig({
   test: {
     dir: "src",
     environment: "node",
-    name: "FactoryTests",
+    name: "Northwind",
     env: {},
   },
 });
