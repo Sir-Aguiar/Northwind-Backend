@@ -14,7 +14,7 @@ interface IProps {
   homepage?: string;
 }
 
-export const CreateSupplierUseCase = async ({
+export const CreateSupplier = async ({
   company_name,
   contact_name,
   contact_title,

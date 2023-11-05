@@ -4,7 +4,7 @@ interface IProps {
   region_id: number;
   territory_description: string;
 }
-export const CreateTerritoryUseCase = async ({ region_id, territory_description }: IProps) => {
+export const CreateTerritory = async ({ region_id, territory_description }: IProps) => {
   if (typeof territory_description !== "string") {
     throw new EntityError(`No description inserted`);
   }

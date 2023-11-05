@@ -1,6 +1,6 @@
 import { EntityError } from "../../entities/EntityError";
 
-export const CreateRegionUseCase = async ({ region_description }: { region_description: string }) => {
+export const CreateRegion = async ({ region_description }: { region_description: string }) => {
   if (typeof region_description !== "string") {
     throw new EntityError("Invalid region description inserted");
   }

@@ -105,7 +105,7 @@ export const CreateEmployee = async ({
     if (typeof extension !== "string") {
       throw new EntityError("Invalid extension");
     }
-  
+
     if (extension.length > 4) {
       throw new EntityError("Extension must have 4 or less characters");
     }

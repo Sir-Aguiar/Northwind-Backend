@@ -6,7 +6,7 @@ interface IProps {
   /* picture:string */
 }
 
-export const CreateCategoryUserCase = async ({ category_name, description }: IProps) => {
+export const CreateCategory = async ({ category_name, description }: IProps) => {
   if (typeof category_name !== "string") {
     throw new EntityError("Invalid category name");
   }

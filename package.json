@@ -8,7 +8,19 @@
     "dev": "tsnd src/index.ts",
     "start": "node ."
   },
-  "keywords": [],
+  "keywords": [
+    "northwind",
+    "database",
+    "postgres",
+    "postgreSQL",
+    "psql",
+    "sql",
+    "prisma",
+    "typescript",
+    "nodejs",
+    "tdd",
+    "vitest"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {

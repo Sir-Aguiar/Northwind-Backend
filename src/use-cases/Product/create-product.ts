@@ -21,16 +21,16 @@ export const CreateProduct = ({
     throw new EntityError("Invalid product name");
   }
 
+  if (product_name.length > 40) {
+    throw new EntityError("Product name must have 40 or less characters");
+  }
+
   if (typeof category_id !== "number") {
     throw new EntityError("Product must belong to a category");
   }
 
   if (typeof supplier_id !== "number") {
     throw new EntityError("Product must have a supplier");
-  }
-
-  if (product_name.length > 40) {
-    throw new EntityError("Product name must have 40 or less characters");
   }
 
   if (typeof quantity_per_unit !== "string") {
