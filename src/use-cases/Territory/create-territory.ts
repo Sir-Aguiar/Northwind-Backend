@@ -1,10 +1,11 @@
+import { IUseCase } from "../../@types/_index";
 import { EntityError } from "../../entities/EntityError";
 
 interface IProps {
   region_id: number;
   territory_description: string;
 }
-export const CreateTerritory = async ({ region_id, territory_description }: IProps) => {
+export const CreateTerritory = ({ region_id, territory_description }: IProps): IUseCase => {
   if (typeof territory_description !== "string") {
     throw new EntityError(`No description inserted`);
   }

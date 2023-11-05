@@ -1,3 +1,5 @@
+import { IUseCase } from "../../@types/_index";
+
 interface IProps {
   company_name: string;
   address: string;
@@ -22,4 +24,7 @@ export const CreateCustomer = ({
   contact_name,
   contact_title,
   fax,
-}: IProps) => {};
+}: IProps): IUseCase => {
+  const execute = async () => {};
+  return { execute };
+};

@@ -1,6 +1,7 @@
+import { IUseCase } from "../../@types/_index";
 import { EntityError } from "../../entities/EntityError";
 
-export const CreateRegion = async ({ region_description }: { region_description: string }) => {
+export const CreateRegion = ({ region_description }: { region_description: string }): IUseCase => {
   if (typeof region_description !== "string") {
     throw new EntityError("Invalid region description inserted");
   }

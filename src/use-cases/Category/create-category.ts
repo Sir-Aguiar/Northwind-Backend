@@ -1,3 +1,4 @@
+import { IUseCase } from "../../@types/_index";
 import { EntityError } from "../../entities/EntityError";
 
 interface IProps {
@@ -6,7 +7,7 @@ interface IProps {
   /* picture:string */
 }
 
-export const CreateCategory = async ({ category_name, description }: IProps) => {
+export const CreateCategory = ({ category_name, description }: IProps): IUseCase => {
   if (typeof category_name !== "string") {
     throw new EntityError("Invalid category name");
   }
@@ -21,7 +22,7 @@ export const CreateCategory = async ({ category_name, description }: IProps) => 
 
   const execute = async () => {
     //
-  }; 
+  };
 
   return { execute };
 };

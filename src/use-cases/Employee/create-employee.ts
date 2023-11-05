@@ -1,3 +1,4 @@
+import { IUseCase } from "../../@types/_index";
 import { EntityError } from "../../entities/EntityError";
 
 interface IProps {
@@ -17,7 +18,7 @@ interface IProps {
   reports_to?: number;
 }
 
-export const CreateEmployee = async ({
+export const CreateEmployee = ({
   first_name,
   last_name,
   address,
@@ -32,7 +33,7 @@ export const CreateEmployee = async ({
   reports_to,
   title,
   title_of_courtesy,
-}: IProps) => {
+}: IProps): IUseCase => {
   if (typeof first_name !== "string") {
     throw new EntityError("Invalid first name");
   }

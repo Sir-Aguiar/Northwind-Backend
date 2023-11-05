@@ -1,3 +1,4 @@
+import { IUseCase } from "../../@types/_index";
 import { EntityError } from "../../entities/EntityError";
 
 interface IProps {
@@ -16,7 +17,7 @@ export const CreateProduct = ({
   supplier_id,
   unit_price,
   units_in_stock,
-}: IProps) => {
+}: IProps): IUseCase => {
   if (typeof product_name !== "string") {
     throw new EntityError("Invalid product name");
   }
