@@ -1,2 +1,5 @@
-interface IProps {}
-export const CreateShipper =  ({}:IProps) => {}
+interface IProps {
+  company_name: string;
+  phone: string;
+}
+export const CreateShipper = ({}: IProps) => {};

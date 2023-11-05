@@ -18,6 +18,18 @@ interface IOrderDetails {
   discount: number;
 }
 
-interface ICustomer {}
+interface ICustomer {
+  customer_id: string;
+  company_name: string;
+  address: string;
+  city: string;
+  region: string;
+  postal_code: string;
+  country: string;
+  phone: string;
+  fax?: string;
+  contact_name?: string;
+  contact_title?: string;
+}
 
 export type { ICustomer, IOrder, IOrderDetails, IShipper };
