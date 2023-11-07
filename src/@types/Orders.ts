@@ -8,12 +8,23 @@ interface IShipper {
 }
 
 interface IOrder {
+  order_id: number;
   customer_id: string;
   Customer: ICustomer;
   employee_id: number;
   Employee: IEmployee;
   ship_via: number;
   Shipper: IShipper;
+  order_date: Date;
+  required_date: Date;
+  shipped_date: Date;
+  freight: number;
+  ship_name: string;
+  ship_address: string;
+  ship_city: string;
+  ship_region: string;
+  ship_postal_code: string;
+  ship_country: string;
 }
 
 interface IOrderDetails {
