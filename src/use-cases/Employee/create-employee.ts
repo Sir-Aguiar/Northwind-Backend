@@ -62,7 +62,7 @@ export const CreateEmployee = ({
     throw new EntityError("Invalid city");
   }
 
-  if (city.length > 60) {
+  if (city.length > 15) {
     throw new EntityError("City must have 15 or less characters");
   }
 

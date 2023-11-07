@@ -1,11 +1,27 @@
-import { IAuthorizationToken, IAuthorizationTokenPayload } from "../@types/User";
 import { EntityError } from "./EntityError";
+
+export interface IAuthorizationTokenPayload {
+  email: string;
+  name: string;
+  userId: string;
+  issuedAt: number;
+}
+
+export interface IAuthorizationTokenData extends Omit<IAuthorizationTokenPayload, "issuedAt"> {
+  issuedAt: Date;
+}
+
+export interface IAuthorizationToken {
+  payload: IAuthorizationTokenPayload;
+  data: IAuthorizationTokenData;
+}
 
 export interface ITokenProps {
   email: string;
   name: string;
   userId: string;
 }
+
 export class AuthorizationToken implements IAuthorizationToken {
   public payload: IAuthorizationTokenPayload;
 

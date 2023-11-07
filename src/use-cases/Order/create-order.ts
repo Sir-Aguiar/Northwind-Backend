@@ -64,7 +64,7 @@ export const CreateOrder = ({
     throw new EntityError("Invalid city");
   }
 
-  if (ship_city.length > 60) {
+  if (ship_city.length > 15) {
     throw new EntityError("City must have 15 or less characters");
   }
 
@@ -94,6 +94,14 @@ export const CreateOrder = ({
 
   if (typeof freight !== "number") {
     throw new EntityError("Invalid freight");
+  }
+
+  if (required_date.getTime() < order_date.getTime()) {
+    throw new EntityError("Invalid required date");
+  }
+
+  if (shipped_date.getTime() < order_date.getTime()) {
+    throw new EntityError("Invalid ship date");
   }
 
   const execute = async () => {};
